@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <defs>
+        <linearGradient id="boltGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#e5e5e5"/>
+        </linearGradient>
+        
+        <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f472b6"/>
+            <stop offset="100%" stop-color="#ec4899"/>
+        </linearGradient>
+        
+        <clipPath id="boltClip">
+            <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z"/>
+        </clipPath>
+    </defs>
+
+    <!-- Fondo oscuro estilo Vercel -->
+    <rect width="512" height="512" rx="108" fill="#000000"/>
+    
+    <!-- Rayo geométrico principal -->
+    <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z" 
+          fill="url(#boltGradient)"/>
+    
+    <!-- Línea de energía rosa -->
+    <line x1="96" y1="248" x2="416" y2="248" 
+          stroke="url(#accentGradient)" 
+          stroke-width="6" 
+          stroke-linecap="round"
+          clip-path="url(#boltClip)"
+          opacity="0.95"/>
+    
+    <!-- Punto de intersección -->
+    <circle cx="264" cy="248" r="10" fill="#f472b6"/>
+</svg>

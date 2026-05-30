@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <defs>
+        <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#fdf2f8"/>
+            <stop offset="100%" stop-color="#fce7f3"/>
+        </linearGradient>
+        <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#1f2937"/>
+            <stop offset="100%" stop-color="#374151"/>
+        </linearGradient>
+        <clipPath id="boltClip">
+            <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z"/>
+        </clipPath>
+    </defs>
+
+    <!-- Fondo pastel rosa -->
+    <rect width="512" height="512" rx="108" fill="url(#bgGrad)"/>
+    <rect width="512" height="512" rx="108" fill="none" stroke="#f9a8d4" stroke-width="2"/>
+    
+    <!-- Rayo oscuro sobre fondo pastel -->
+    <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z" 
+          fill="url(#boltGrad)"/>
+    
+    <!-- Línea punteada rosa vibrante -->
+    <line x1="80" y1="210" x2="432" y2="210" 
+          stroke="#ec4899" 
+          stroke-width="8" 
+          stroke-linecap="round"
+          stroke-dasharray="20,16"
+          clip-path="url(#boltClip)"/>
+    
+    <!-- Texto -->
+    <text x="256" y="488" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="600" fill="#9ca3af" letter-spacing="3">PICO-CERO</text>
+</svg>

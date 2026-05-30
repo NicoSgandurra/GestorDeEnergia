@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <defs>
+        <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#f8f8f8"/>
+        </linearGradient>
+        <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+            <feGaussianBlur stdDeviation="4" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+
+    <!-- Fondo negro redondeado -->
+    <rect width="512" height="512" rx="108" fill="#000000"/>
+    
+    <!-- Rayo blanco con bordes redondeados y brillo -->
+    <path d="M295 80 L160 280 Q155 290 165 295 L255 295 Q265 295 262 305 L225 430 Q220 445 235 440 L395 210 Q405 200 395 195 L285 195 Q275 195 278 185 Z" 
+          fill="url(#boltGrad)" 
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linejoin="round"
+          filter="url(#softGlow)"/>
+    
+    <!-- Línea punteada roja con efecto de energía -->
+    <line x1="85" y1="215" x2="425" y2="215" 
+          stroke="#ff003c" 
+          stroke-width="8" 
+          stroke-linecap="round"
+          stroke-dasharray="18,14"/>
+    
+    <!-- Chispas estáticas cute -->
+    <circle cx="330" cy="105" r="5" fill="#ff003c" opacity="0.9">
+        <animate attributeName="opacity" values="0.9;0.3;0.9" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="355" cy="88" r="3.5" fill="#ff003c" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;0.2;0.7" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="345" cy="120" r="2.5" fill="#ff003c" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.1;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="370" cy="100" r="3" fill="#ff003c" opacity="0.5">
+        <animate attributeName="opacity" values="0.5;0.1;0.5" dur="1.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="318" cy="92" r="2" fill="#ff003c" opacity="0.4">
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="1.6s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Texto -->
+    <text x="256" y="488" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="600" fill="#555555" letter-spacing="3">PICO-CERO</text>
+</svg>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <defs>
+        <!-- Gradiente sutil para el rayo - blanco a gris claro -->
+        <linearGradient id="boltGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#e5e5e5"/>
+        </linearGradient>
+        
+        <!-- Gradiente de acento rosa/magenta -->
+        <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#f472b6"/>
+            <stop offset="100%" stop-color="#ec4899"/>
+        </linearGradient>
+        
+        <!-- Clip path para contener elementos dentro del rayo -->
+        <clipPath id="boltClip">
+            <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z"/>
+        </clipPath>
+    </defs>
+
+    <!-- Fondo oscuro estilo Vercel - negro puro con esquinas redondeadas -->
+    <rect width="512" height="512" rx="108" fill="#000000"/>
+    
+    <!-- Borde exterior muy sutil -->
+    <rect width="512" height="512" rx="108" fill="none" stroke="#1a1a1a" stroke-width="1"/>
+    
+    <!-- Rayo geométrico principal - diseño limpio y profesional -->
+    <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z" 
+          fill="url(#boltGradient)"/>
+    
+    <!-- Línea de energía rosa que representa el límite de consumo -->
+    <line x1="96" y1="248" x2="416" y2="248" 
+          stroke="url(#accentGradient)" 
+          stroke-width="6" 
+          stroke-linecap="round"
+          clip-path="url(#boltClip)"
+          opacity="0.95"/>
+    
+    <!-- Punto de intersección - indicador de límite alcanzado -->
+    <circle cx="264" cy="248" r="10" fill="#f472b6"/>
+    
+    <!-- Líneas de energía sutiles en la parte superior derecha -->
+    <line x1="336" y1="128" x2="356" y2="168" stroke="#222222" stroke-width="3" stroke-linecap="round"/>
+    <line x1="360" y1="144" x2="380" y2="184" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+    <line x1="384" y1="160" x2="404" y2="200" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+    
+    <!-- Texto "PICO" sutil en la parte inferior -->
+    <text x="256" y="490" 
+          text-anchor="middle"
+          font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" 
+          font-size="24" 
+          font-weight="500"
+          fill="#333333" 
+          letter-spacing="8">PICO</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+    <defs>
+        <linearGradient id="boltGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#ffffff"/>
+            <stop offset="100%" stop-color="#f0f0f0"/>
+        </linearGradient>
+        <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="6" result="blur"/>
+            <feMerge>
+                <feMergeNode in="blur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        <clipPath id="boltClip">
+            <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z"/>
+        </clipPath>
+    </defs>
+
+    <!-- Fondo negro redondeado -->
+    <rect width="512" height="512" rx="108" fill="#000000"/>
+    
+    <!-- Rayo blanco con brillo sutil -->
+    <path d="M288 72 L152 288 H264 L220 440 L400 200 H272 Z" 
+          fill="url(#boltGrad)" filter="url(#glow)"/>
+    
+    <!-- Línea punteada roja con glow -->
+    <line x1="80" y1="210" x2="432" y2="210" 
+          stroke="#ff003c" 
+          stroke-width="8" 
+          stroke-linecap="round"
+          stroke-dasharray="20,16"
+          clip-path="url(#boltClip)"
+          filter="url(#glow)"/>
+    
+    <!-- Pequeñas chispa estática arriba del rayo -->
+    <circle cx="340" cy="100" r="4" fill="#ff003c" opacity="0.8"/>
+    <circle cx="360" cy="85" r="3" fill="#ff003c" opacity="0.6"/>
+    <circle cx="350" cy="115" r="2" fill="#ff003c" opacity="0.5"/>
+    <circle cx="375" cy="105" r="2.5" fill="#ff003c" opacity="0.4"/>
+    
+    <!-- Texto -->
+    <text x="256" y="488" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="30" font-weight="600" fill="#555555" letter-spacing="3">PICO-CERO</text>
+</svg>
